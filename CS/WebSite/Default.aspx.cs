@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using DevExpress.Web.ASPxTabControl;
+using DevExpress.Web;
 
 public partial class _Default : System.Web.UI.Page {
     private int LastIndex {
@@ -55,7 +55,7 @@ public partial class _Default : System.Web.UI.Page {
         OpenTabPagesCollection.Remove(dicIndex);
         page_ctrl.TabPages.RemoveAt(index);
     }
-    protected void Callback_panel_Callback(object sender, DevExpress.Web.ASPxClasses.CallbackEventArgsBase e) {
+    protected void Callback_panel_Callback(object sender, DevExpress.Web.CallbackEventArgsBase e) {
         if (e.Parameter == "new") {
             int newIndex = LastIndex + 1;
             string newTabName = "Tab" + newIndex;

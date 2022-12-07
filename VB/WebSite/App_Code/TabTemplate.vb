@@ -1,5 +1,5 @@
 ﻿Imports System.Web.UI
-Imports DevExpress.Web.ASPxEditors
+Imports DevExpress.Web
 
 Public Class TabTemplate
     Implements ITemplate
@@ -25,7 +25,7 @@ Public Class TabTemplate
             close_btn.ID = "closeBtn" & container.ID
             container.Controls.Add(close_btn)
             close_btn.ImageUrl = "~/Images/Close.png"
-            close_btn.ImagePosition = DevExpress.Web.ASPxClasses.ImagePosition.Right
+            close_btn.ImagePosition = DevExpress.Web.ImagePosition.Right
             close_btn.AutoPostBack = False
             close_btn.ClientSideEvents.Click = "function(s, e) { closeActiveTab(); }"
         End If

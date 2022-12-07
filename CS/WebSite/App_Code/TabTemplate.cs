@@ -1,5 +1,5 @@
 ﻿using System.Web.UI;
-using DevExpress.Web.ASPxEditors;
+using DevExpress.Web;
 
 public class TabTemplate : ITemplate {
     private int index;
@@ -24,7 +24,7 @@ public class TabTemplate : ITemplate {
             close_btn.ID = "closeBtn" + container.ID;
             container.Controls.Add(close_btn);
             close_btn.ImageUrl = "~/Images/Close.png";
-            close_btn.ImagePosition = DevExpress.Web.ASPxClasses.ImagePosition.Right;
+            close_btn.ImagePosition = DevExpress.Web.ImagePosition.Right;
             close_btn.AutoPostBack = false;
             close_btn.ClientSideEvents.Click = "function(s, e) { closeActiveTab(); }";
         }

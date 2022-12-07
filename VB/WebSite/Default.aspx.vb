@@ -3,7 +3,7 @@ Imports System.Collections.Generic
 Imports System.Linq
 Imports System.Web.UI
 Imports System.Web.UI.WebControls
-Imports DevExpress.Web.ASPxTabControl
+Imports DevExpress.Web
 
 Partial Public Class _Default
     Inherits System.Web.UI.Page
@@ -67,7 +67,7 @@ Partial Public Class _Default
         OpenTabPagesCollection.Remove(dicIndex)
         page_ctrl.TabPages.RemoveAt(index)
     End Sub
-    Protected Sub Callback_panel_Callback(ByVal sender As Object, ByVal e As DevExpress.Web.ASPxClasses.CallbackEventArgsBase)
+    Protected Sub Callback_panel_Callback(ByVal sender As Object, ByVal e As DevExpress.Web.CallbackEventArgsBase)
         If e.Parameter = "new" Then
             Dim newIndex As Integer = LastIndex + 1
             Dim newTabName As String = "Tab" & newIndex
